@@ -14,6 +14,7 @@ setup(
 	install_requires=[
 		'numpy>=1.15.0',
 		'matplotlib>=2.0.2',
-		'pandas>=0.23.0'
+		'pandas>=0.23.0',
+                'cython'
 	]
 )
