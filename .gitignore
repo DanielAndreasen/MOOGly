@@ -1,0 +1,8 @@
+*.code-workspace
+venv/
+build/
+dist/
+*egg-info
+.envrc
+moogly/__pycache__
+*.out
