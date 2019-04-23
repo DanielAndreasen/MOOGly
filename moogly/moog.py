@@ -50,7 +50,11 @@ class MOOG:
             fout += f"abundances   {self.kwargs.get('abundances', '1 3')}\n"
             fout += f"   {self.kwargs.get('abundances1', '26   0.20   0.00   -0.20')}\n"
         else:
-            fout += f''
+            fout += f"strong      {self.kwargs.get('strong', '0')}\n"
+            fout += f"iraf        {self.kwargs.get('iraf', '0')}\n"
+            fout += f"opacit      {self.kwargs.get('opacit', '0')}\n"
+            fout += f"freeform    {self.kwargs.get('freeform', '0')}\n"
+            fout += f"obspectrum   {self.kwargs.get('obspectrum', '0')}\n"
 
         with open('conf.par', 'w') as f:
             f.write(fout)
