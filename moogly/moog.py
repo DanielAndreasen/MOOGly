@@ -85,9 +85,7 @@ class MOOGSynthOutput:
         self.fname = fname
         self.data = self._read_output()
         self.wavelength = self.data[0][:, 0]
-        self.flux = []
-        for fl in self.data:
-            self.flux.append(fl[:, 1])
+        self.flux = [fl[:, 1] for fl in self.data]
 
     def _read_output(self):
         d = []
@@ -128,7 +126,7 @@ class MOOGEWOutput:
     def __init__(self, fname):
         self.fname = fname
         self.data = pd.read_csv(self.fname, sep=r'\s+', skiprows=5, skipfooter=4, engine='python')
-    
+
     def __len__(self):
         return len(self.data)
 
